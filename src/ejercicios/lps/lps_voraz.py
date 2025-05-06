@@ -1,5 +1,5 @@
 "Solucion de Voraz para el problema de la subsecuencia palindromica más larga (LPS)."
-from .utils import normalize
+from ...utils.normalize import normalize
 
 def solve_lps_greedy(lines: list[str]) -> list[str]:
     """

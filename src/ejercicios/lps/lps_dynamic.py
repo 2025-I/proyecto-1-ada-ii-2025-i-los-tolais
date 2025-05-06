@@ -1,5 +1,5 @@
 "Solución de programación dinámica para el problema de la subsecuencia palindromica más larga (LPS)."
-from .utils import normalize
+from ...utils.normalize import normalize
 
 def solve_lps_dp(lines: list[str]) -> list[str]:
     """
