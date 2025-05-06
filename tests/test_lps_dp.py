@@ -25,22 +25,22 @@ class TestDPRepetition(TestRepetition):
                     msg=f"[Iter {rep+1}] Entrada {i}: Esperado '{exp}' en '{res}'",
                 )
 
-    def test_juguete(self):
+    def test_juguete_dynamic(self):
         """Prueba básica de 10 elementos (verificación de correctitud)."""
         self.run_scaled_test(num_elements=10)
 
-    def test_pequeno(self):
+    def test_pequeno_dynamic(self):
         """Prueba con 100 elementos."""
         self.run_scaled_test(num_elements=100)
 
-    def test_mediano(self):
+    def test_mediano_dynamic(self):
         """Prueba con 1000 elementos."""
         self.run_scaled_test(num_elements=1000, repetitions=3)
 
-    def test_grande(self):
+    def test_grande_dynamic(self):
         """Prueba con 10000 elementos."""
         self.run_scaled_test(num_elements=10000, repetitions=2)
 
-    def test_extra_grande(self):
+    def test_extra_grande_dynamic(self):
         """Prueba con 50000 elementos (puede tardar)."""
         self.run_scaled_test(num_elements=50000, repetitions=1)
