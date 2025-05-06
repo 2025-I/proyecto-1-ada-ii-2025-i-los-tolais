@@ -1,6 +1,8 @@
-import unittest
+"Repetición de pruebas para el algoritmo de la subsecuencia palindrómica más larga (LPS)."
 import time
+import unittest
 from typing import Callable
+
 from .generators import generate_list_test_phrase
 
 
@@ -51,8 +53,9 @@ class TestRepetition(unittest.TestCase):
             expected = self._reference(phrase)
             result = self._algorithm(phrase)
             self.assertEqual(
-                result, expected,
-                msg=f"Falló en la prueba #{i+1}:\nEsperado: {expected}\nResultado: {result}"
+                result,
+                expected,
+                msg=f"Falló en la prueba #{i+1}:\nEsperado: {expected}\nResultado: {result}",
             )
 
     def run_scaled_test(self, num_elements: int, repetitions: int = 5):

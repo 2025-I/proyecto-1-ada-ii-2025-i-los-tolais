@@ -1,3 +1,4 @@
+"Solución de fuerza bruta para el problema de la fiesta"
 def solve_party_brute(lines):
     index = 1
     results = []
