@@ -10,7 +10,7 @@ def solve_party_brute(lines):
         values = list(map(int, lines[index + m + 1].split()))
         index += m + 2
 
-        tree = build_tree(matrix)
+        tree = build_tree_brute(matrix)
         invited, total = brute_force(tree, values)
         result_line = " ".join(str(i) for i in invited) + f" {total}"
         results.append(result_line)
@@ -18,7 +18,7 @@ def solve_party_brute(lines):
     return results
 
 
-def build_tree(matrix):
+def build_tree_brute(matrix):
     tree = {}
     n = len(matrix)
     for i in range(n):

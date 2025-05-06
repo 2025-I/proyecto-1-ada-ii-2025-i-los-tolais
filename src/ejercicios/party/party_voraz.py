@@ -9,7 +9,7 @@ def solve_party_voraz(lines):
         values = list(map(int, lines[index + m + 1].split()))
         index += m + 2
 
-        tree = build_tree(matrix)
+        tree = build_tree_voraz(matrix)
         invited, total = voraz(tree, values)
         result_line = " ".join(str(i) for i in invited) + f" {total}"
         results.append(result_line)
@@ -17,7 +17,7 @@ def solve_party_voraz(lines):
     return results
 
 
-def build_tree(matrix):
+def build_tree_voraz(matrix):
     tree = {}
     n = len(matrix)
     for i in range(n):
