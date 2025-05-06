@@ -14,6 +14,7 @@ def solve_lps_dp(lines: list[str]) -> list[str]:
 
     out = []
     for raw in raws:
+        # Normalizamos la cadena
         s = normalize(raw)
         m = len(s)
         if m == 0:
