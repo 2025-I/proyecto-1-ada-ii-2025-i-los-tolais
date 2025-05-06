@@ -2,7 +2,7 @@ import random
 
 from faker import Faker
 
-from src.ejercicios.lps.utils import normalize
+from utils.normalize import normalize
 
 fake = Faker()
 
