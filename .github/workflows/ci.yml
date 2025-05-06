@@ -33,12 +33,16 @@ jobs:
         run: |
           coverage xml -o coverage.xml
 
+      - name: Download Codacy Coverage Reporter
+        run: |
+          curl -Ls https://coverage.codacy.com/get.sh > codacy-coverage-reporter
+          chmod +x codacy-coverage-reporter
+
+      - name: Upload coverage to Codacy
+        run: ./codacy-coverage-reporter report -r coverage.xml
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+
       - name: Run Pylint
         run: |
           pylint $(git ls-files '*.py') || true
-
-      - name: Send Coverage to Codacy
-        run: |
-          python-codacy-coverage -r coverage.xml || true
-        env:
-          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
