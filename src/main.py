@@ -2,8 +2,8 @@ import sys
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
-from .ejercicios.lps.lps_brute import solve_lps_brute
-from .ejercicios.lps.lps_dynamic import solve_lps_dp
+#from .ejercicios.lps.lps_brute import solve_lps_brute
+#from .ejercicios.lps.lps_dynamic import solve_lps_dp
 from .ejercicios.lps.lps_voraz import solve_lps_greedy
 
 
