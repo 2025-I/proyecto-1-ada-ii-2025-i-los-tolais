@@ -9,22 +9,22 @@ class TestGreedyRepetition(TestRepetition):
         self.setAlgorithm(lambda s: solve_lps_greedy([s])[0])
         self.setReference(lambda s: solve_lps_dp([s])[0])
 
-    def test_juguete(self):
+    def test_juguete_voraz(self):
         """Prueba con 10 elementos (casos de juguete)."""
         self.run_scaled_test(num_elements=10)
 
-    def test_pequeno(self):
+    def test_pequeno_voraz(self):
         """Prueba con 100 elementos."""
         self.run_scaled_test(num_elements=100)
 
-    def test_mediano(self):
+    def test_mediano_voraz(self):
         """Prueba con 1000 elementos."""
         self.run_scaled_test(num_elements=1000, repetitions=3)
 
-    def test_grande(self):
+    def test_grande_voraz(self):
         """Prueba con 10000 elementos."""
         self.run_scaled_test(num_elements=10000, repetitions=2)
 
-    def test_extra_grande(self):
-        """Prueba con 50000 elementos (puede tardar)."""
+    def test_extra_grande_voraz(self):
+        """Prueba con 50000 elementos"""
         self.run_scaled_test(num_elements=50000, repetitions=1)
