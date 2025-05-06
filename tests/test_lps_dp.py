@@ -1,6 +1,7 @@
-import unittest
+"Prueba de la solución de programación dinámica para el problema de la subsecuencia palindromica más larga (LPS)."
 from src.ejercicios.lps.lps_dynamic import solve_lps_dp
 from tests.test_repetition import TestRepetition
+
 from .generators import generate_list_test_phrase
 
 
@@ -18,7 +19,11 @@ class TestDPRepetition(TestRepetition):
             results = solve_lps_dp(inputs)
 
             for i, (res, exp) in enumerate(zip(results, expected_outputs)):
-                self.assertIn(exp, res, msg=f"[Iter {rep+1}] Entrada {i}: Esperado '{exp}' en '{res}'")
+                self.assertIn(
+                    exp,
+                    res,
+                    msg=f"[Iter {rep+1}] Entrada {i}: Esperado '{exp}' en '{res}'",
+                )
 
     def test_juguete(self):
         """Prueba básica de 10 elementos (verificación de correctitud)."""

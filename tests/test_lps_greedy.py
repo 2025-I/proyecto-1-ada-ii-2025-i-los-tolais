@@ -1,8 +1,6 @@
-# tests/test_lps_greedy.py
-
-import unittest
-from src.ejercicios.lps.lps_voraz import solve_lps_greedy
+"Prueba de la solución voraz para el problema LPS."
 from src.ejercicios.lps.lps_dynamic import solve_lps_dp
+from src.ejercicios.lps.lps_voraz import solve_lps_greedy
 from tests.test_repetition import TestRepetition
 
 
