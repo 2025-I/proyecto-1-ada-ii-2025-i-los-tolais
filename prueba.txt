@@ -1,4 +1,18 @@
-3
-Llego a tierra y le dijo: Dabale arroz a la zorra el abad, ella acepto
-El ministro dijo Se es o no se es un ministro
-Maria dijo Yo dono rosas, oro no doy por ello el la dejo
+2
+
+5
+0 1 0 0 0
+0 0 1 0 0
+0 0 0 1 0
+0 0 0 0 1
+0 0 0 0 0
+10 30 15 5 8
+
+6
+0 1 0 0 0 0
+0 0 1 1 0 0
+0 0 0 0 0 1
+0 0 0 0 1 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+12 18 5 10 8 7

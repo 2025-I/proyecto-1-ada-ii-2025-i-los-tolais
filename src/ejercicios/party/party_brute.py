@@ -1,4 +1,5 @@
-"Solución de fuerza bruta para el problema de la fiesta"
+from itertools import product
+
 def solve_party_brute(lines):
     index = 1
     results = []
@@ -17,22 +18,15 @@ def solve_party_brute(lines):
 
     return results
 
-
 def build_tree_brute(matrix):
-    tree = {}
-    n = len(matrix)
-    for i in range(n):
-        tree[i] = []
-    for i in range(n):
-        for j in range(n):
+    tree = {i: [] for i in range(len(matrix))}
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
             if matrix[i][j] == 1:
                 tree[i].append(j)
     return tree
 
-
 def brute_force(tree, values):
-    from itertools import product
-
     n = len(values)
     max_total = 0
     best_combo = [0] * n
