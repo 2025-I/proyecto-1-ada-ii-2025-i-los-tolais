@@ -140,7 +140,7 @@ Este enfoque usa programación dinámica sobre árboles. La jerarquía organizac
 ```
 - Si el padre no fue invitado, se elige entre invitar o no al nodo actual, según cuál produce mayor puntuación. Se propaga el estado a los hijos.
 
-### Analicis complejidad:
+### Analisis complejidad:
 
 - **Tiempo**: O(n), donde n es el número de empleados.
 
