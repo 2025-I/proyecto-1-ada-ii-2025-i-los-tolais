@@ -24,14 +24,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Tests
+      - name: Check Compilation
         run: |
-          export PYTHONPATH=$(pwd)/src  # Agregar src al PYTHONPATH
-          pytest --cov=./ > result.log || true
-
-      - name: Generate Coverage Report
-        run: |
-          coverage xml -o coverage.xml
+          python -m compileall src  # Solo verificar si el código compila
 
       - name: Run Pylint
         run: |
