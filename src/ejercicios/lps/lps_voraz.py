@@ -1,10 +1,6 @@
-"Solucion de Voraz para el problema de la subsecuencia palindromica más larga (LPS)."
 from ...utils.normalize import normalize
 
 def solve_lps_greedy(lines: list[str]) -> list[str]:
-    """
-    Centro-expand: O(n^2), O(1) espacio. Rápido en la práctica.
-    """
     try:
         n = int(lines[0])
         raws = lines[1 : 1 + n]
