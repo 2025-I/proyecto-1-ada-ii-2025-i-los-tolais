@@ -1,4 +1,5 @@
 import random
+import time
 
 import pytest
 
@@ -29,28 +30,38 @@ def format_matrix_as_lines(matrix):
         # (50000, "extra_grande"),
     ],
 )
-@pytest.mark.parametrize("repeat", range(1))
-def test_party_dp_scaled(size, label, repeat):
-    num_problems = 1
-    matrix = generate_random_tree_matrix(size)
-    values = [random.randint(1, 30) for _ in range(size)]
+def test_party_dp_avg_time(size, label):
+    repetitions = 5
+    total_time = 0.0
 
-    lines = [str(num_problems), str(size)]
-    lines += format_matrix_as_lines(matrix)
-    lines.append(" ".join(map(str, values)))
+    for _ in range(repetitions):
+        num_problems = 1
+        matrix = generate_random_tree_matrix(size)
+        values = [random.randint(1, 30) for _ in range(size)]
 
-    outputs = solve_party_dp(lines)
-    assert len(outputs) == 1
+        lines = [str(num_problems), str(size)]
+        lines += format_matrix_as_lines(matrix)
+        lines.append(" ".join(map(str, values)))
 
-    parts = list(map(int, outputs[0].split()))
-    assert len(parts) == size + 1
-    invited = parts[:-1]
-    total = parts[-1]
+        start = time.time()
+        outputs = solve_party_dp(lines)
+        end = time.time()
+        total_time += end - start
 
-    for parent in range(size):
-        for child in range(size):
-            if matrix[parent][child] == 1:
-                assert not (invited[parent] == 1 and invited[child] == 1)
+        assert len(outputs) == 1
 
-    expected_total = sum(values[i] for i in range(size) if invited[i] == 1)
-    assert total == expected_total
+        parts = list(map(int, outputs[0].split()))
+        assert len(parts) == size + 1
+        invited = parts[:-1]
+        total = parts[-1]
+
+        for parent in range(size):
+            for child in range(size):
+                if matrix[parent][child] == 1:
+                    assert not (invited[parent] == 1 and invited[child] == 1)
+
+        expected_total = sum(values[i] for i in range(size) if invited[i] == 1)
+        assert total == expected_total
+
+    avg_time = total_time / repetitions
+    print(f"\nTiempo promedio ({label}, {size} elementos): {avg_time:.5f} segundos")
