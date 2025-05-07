@@ -1,47 +1,62 @@
-"Prueba de la solución de fuerza bruta para el problema LPS"
-
-import random
-import string
-import unittest
+import time
 
 from src.ejercicios.lps.lps_brute import solve_lps_brute
 from src.ejercicios.lps.lps_dynamic import solve_lps_dp
+from src.utils.generators import generate_list_test_phrase
+from src.utils.repetition import TestRepetition
 
 
-class TestBruteRepetition(unittest.TestCase):
-    def generate_input(self, num_elements):
-        return [
-            "".join(random.choices(string.ascii_letters + string.digits, k=3))
-            for _ in range(num_elements)
-        ]
+class TestBruteRepetition(TestRepetition):
+    def setUp(self):
+        # Establece el algoritmo de prueba como fuerza bruta
+        self.setAlgorithm(lambda s: solve_lps_brute([s])[0])
 
-    def run_scaled_test(self, num_elements, repetitions=3):
+    def run_scaled_test(self, num_elements: int, repetitions: int = 5):
+        """
+        Ejecuta pruebas escaladas para una cantidad dada de elementos
+        y repite varias veces para calcular el tiempo promedio.
+        """
+        total_time = 0.0
+
         for rep in range(repetitions):
-            data = self.generate_input(num_elements)
-            expected = solve_lps_dp(
-                data
-            )  # Reutilizamos la salida de DP como referencia correcta
-            result = solve_lps_brute(data)
+            list_test_data = generate_list_test_phrase(num_elements)
+            inputs = [phrase for phrase, _ in list_test_data]
+            expected_outputs = solve_lps_dp(inputs)  # Se toma como referencia
 
-            for i, (exp, res) in enumerate(zip(expected, result)):
+            start = time.time()
+            results = solve_lps_brute(inputs)
+            end = time.time()
+
+            total_time += end - start
+
+            for i, (res, exp) in enumerate(zip(results, expected_outputs)):
                 self.assertIn(
                     exp,
                     res,
-                    msg=f"[Iter {rep+1}] Entrada {i}: Esperado '{exp}' en '{res}'",
+                    msg=f"[Iter {rep + 1}] Entrada {i}: Esperado '{exp}' en '{res}'",
                 )
+
+        average_time = total_time / repetitions
+        print(
+            f"Tiempo promedio de ejecución para tamaño {num_elements}: {average_time:.4f} segundos"
+        )
 
     def test_pequeno_brute(self):
         """Prueba con 100 elementos."""
-        self.run_scaled_test(num_elements=100)
+        self.run_scaled_test(num_elements=100, repetitions=5)
+
+    def test_juguete_brute(self):
+        """Prueba básica con 10 elementos."""
+        self.run_scaled_test(num_elements=10, repetitions=5)
 
     def test_mediano_brute(self):
         """Prueba con 1000 elementos."""
-        self.run_scaled_test(num_elements=1000, repetitions=3)
+        self.run_scaled_test(num_elements=1000, repetitions=5)
 
     def test_grande_brute(self):
         """Prueba con 10000 elementos."""
-        self.run_scaled_test(num_elements=10000, repetitions=2)
+        self.run_scaled_test(num_elements=10000, repetitions=5)
 
     def test_extra_grande_brute(self):
         """Prueba con 50000 elementos (puede tardar)."""
-        self.run_scaled_test(num_elements=50000, repetitions=1)
+        self.run_scaled_test(num_elements=50000, repetitions=5)

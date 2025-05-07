@@ -16,7 +16,7 @@
     - [2.1 algoritmo por solucion de fuerza bruta](../src/ejercicios/lps/lps_brute.py)
     - [2.2 algoritmo por programación dinamica](../src/ejercicios/lps/lps_dynamic.py)
     - [2.1 algoritmo por solucion de fuerza bruta](../src/ejercicios/lps/lps_voraz.py)
-- [3. Documentación de los tests](/docs/Readme.md)
-    - **continuar aqui**
-
-
+- [3. Documentación de los tests de lps](/docs/Readme.md)
+    - [3.1 Documentacion del test para lps con solucion de fuerza bruta](/docs/test_lps_brute.md)
+    - [3.2 Documentacion del test para lps con programación dinámica](/docs/test_lps_dp.md)
+    - [3.3 Documentacion del test para lps con solucion voraz](/docs/test_lps_greedy.md)
