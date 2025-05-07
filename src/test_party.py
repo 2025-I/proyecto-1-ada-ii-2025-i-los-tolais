@@ -1,4 +1,4 @@
-from ejercicios.party.party_brute import fiestaFuerzaBruta
+from ejercicios.party.party_brute import solve_party_brute
 from ejercicios.party.party_dynamic import solve_party_dp
 from ejercicios.party.party_voraz import solve_party_voraz
 
@@ -11,7 +11,7 @@ if __name__ == '__main__':
     lines = leer_archivo("prueba.txt")
     
     print("Fuerza bruta:")
-    for r in fiestaFuerzaBruta(lines):
+    for r in solve_party_brute(lines):
         print(r)
 
     print("\nProgramación dinámica:")
