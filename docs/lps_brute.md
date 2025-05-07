@@ -1,7 +1,8 @@
 # Solucion Por fuerza bruta.
 
 ## lps_brute.py
-[implementacion del algoritmo por solucion de fuerza bruta](../src/ejercicios/lps/lps_brute.py)
+- [implementacion del algoritmo por solucion de fuerza bruta](../src/ejercicios/lps/lps_brute.py)
+- [Volver a la tabla de contenido](/docs/Readme.md)
 
 # solve_lps_brute
 

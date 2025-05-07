@@ -1,3 +1,7 @@
+# Solución Voraz
+
+- [implementacion del algoritmo por solución voraz](../src/ejercicios/lps/lps_voraz.py)
+- [Volver a la tabla de contenido](/docs/Readme.md)
 ## lps_voraz
 Este módulo implementa una solución voraz (greedy) para encontrar la subsecuencia palindrómica más larga. Aunque esta aproximación puede ser más rápida en algunos casos, no garantiza encontrar la solución óptima en todos los escenarios, ya que no evalúa todas las posibilidades como lo hacen las soluciones de fuerza bruta o programación dinámica.
 

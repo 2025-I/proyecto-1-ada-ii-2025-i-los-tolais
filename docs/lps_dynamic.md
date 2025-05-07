@@ -1,7 +1,9 @@
 # Solucion Programación dinamica.
 
 ## lps_dynamic.py
-[implementacion del algoritmo por progamación dinamica](../src/ejercicios/lps/lps_dynamic.py)
+- [implementacion del algoritmo por progamación dinamica](../src/ejercicios/lps/lps_dynamic.py)
+- [Volver a la tabla de contenido](/docs/Readme.md)
+
 Este módulo implementa una solución basada en programación dinámica para encontrar la subsecuencia palindrómica más larga. Utiliza una tabla bidimensional para almacenar los resultados de subproblemas, evitando cálculos redundantes y mejorando significativamente la eficiencia en comparación con la solución de fuerza bruta.
 
 ### Función Principal:
