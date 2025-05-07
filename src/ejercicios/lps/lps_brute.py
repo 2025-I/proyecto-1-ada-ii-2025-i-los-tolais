@@ -1,10 +1,7 @@
-"""Solución de fuerza bruta para el problema de la subsecuencia palindromica más larga (LPS)."""
 from ...utils.normalize import normalize
 
 def solve_lps_brute(lines: list[str]) -> list[str]:
-    """
-    Fuerza bruta: O(n^3). Sólo válido para n pequeño (≤ 200).
-    """
+
 
     def is_pal(x: str) -> bool:
         return x == x[::-1]
@@ -20,7 +17,7 @@ def solve_lps_brute(lines: list[str]) -> list[str]:
         s = normalize(raw)
         best = ""
         n = len(s)
-        # Generar todos los pares (i,j)
+        # Genera todos los pares (i,j)
         for i in range(n):
             for j in range(i, n):
                 sub = s[i : j + 1]

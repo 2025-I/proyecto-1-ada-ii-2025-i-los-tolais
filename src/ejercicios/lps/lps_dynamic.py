@@ -1,12 +1,6 @@
-"Solución de programación dinámica para el problema de la subsecuencia palindromica más larga (LPS)."
 from ...utils.normalize import normalize
 
 def solve_lps_dp(lines: list[str]) -> list[str]:
-    """
-    Dada la entrada, devuelve para cada línea la subcadena
-    palindrómica CONTINUA más larga tras normalizar.
-    """
-    # Si hay un entero n al inicio, tomar las n líneas siguientes
     try:
         n = int(lines[0])
         raws = lines[1 : 1 + n]
