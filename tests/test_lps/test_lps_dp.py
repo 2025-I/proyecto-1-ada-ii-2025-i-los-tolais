@@ -1,8 +1,8 @@
 "Prueba de la solución de programación dinámica para el problema de la subsecuencia palindromica más larga (LPS)."
-from src.ejercicios.lps.lps_dynamic import solve_lps_dp
-from src.utils.repetition import TestRepetition
 
+from src.ejercicios.lps.lps_dynamic import solve_lps_dp
 from src.utils.generators import generate_list_test_phrase
+from src.utils.repetition import TestRepetition
 
 
 class TestDPRepetition(TestRepetition):

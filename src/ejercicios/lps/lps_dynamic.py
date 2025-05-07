@@ -1,5 +1,6 @@
 from ...utils.normalize import normalize
 
+
 def solve_lps_dp(lines: list[str]) -> list[str]:
     try:
         n = int(lines[0])

@@ -1,6 +1,9 @@
-import pytest
 import random
+
+import pytest
+
 from src.ejercicios.party.party_brute import solve_party_brute
+
 
 def generate_random_tree_matrix(m):
     matrix = [[0] * m for _ in range(m)]
@@ -11,14 +14,19 @@ def generate_random_tree_matrix(m):
         matrix[nodes[parent]][nodes[i]] = 1
     return matrix
 
+
 def format_matrix_as_lines(matrix):
     return [" ".join(map(str, row)) for row in matrix]
 
-@pytest.mark.parametrize("size,label", [
-    (10, "juguete"),
-    (15, "pequeño"),
-    (20, "mediano"),
-])
+
+@pytest.mark.parametrize(
+    "size,label",
+    [
+        (10, "juguete"),
+        (15, "pequeño"),
+        (20, "mediano"),
+    ],
+)
 @pytest.mark.parametrize("repeat", range(1))
 def test_party_brute_scaled(size, label, repeat):
     num_problems = 1

@@ -1,4 +1,5 @@
 "Repetición de pruebas para el algoritmo de la subsecuencia palindrómica más larga (LPS)."
+
 import time
 import unittest
 from typing import Callable

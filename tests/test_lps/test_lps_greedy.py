@@ -1,4 +1,5 @@
 "Prueba de la solución voraz para el problema LPS."
+
 from src.ejercicios.lps.lps_dynamic import solve_lps_dp
 from src.ejercicios.lps.lps_voraz import solve_lps_greedy
 from src.utils.repetition import TestRepetition

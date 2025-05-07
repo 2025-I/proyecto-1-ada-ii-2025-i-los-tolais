@@ -1,5 +1,6 @@
 from ...utils.normalize import normalize
 
+
 def solve_lps_greedy(lines: list[str]) -> list[str]:
     try:
         n = int(lines[0])

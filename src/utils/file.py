@@ -1,6 +1,7 @@
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
+
 def choose_input_file() -> str:
     """
     Abre un diálogo para elegir un archivo y devuelve la ruta.
