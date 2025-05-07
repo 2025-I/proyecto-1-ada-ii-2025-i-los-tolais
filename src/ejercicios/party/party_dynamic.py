@@ -1,9 +1,9 @@
 def solve_party_dp(lines):
     index = 1
     results = []
-    numproblems = int(lines[0])
+    num_problems = int(lines[0])
 
-    for  in range(num_problems):
+    for _ in range(num_problems):
         m = int(lines[index])
         matrix = [list(map(int, lines[index + i + 1].split())) for i in range(m)]
         values = list(map(int, lines[index + m + 1].split()))
