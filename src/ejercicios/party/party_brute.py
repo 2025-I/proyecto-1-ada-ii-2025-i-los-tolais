@@ -1,5 +1,6 @@
 from itertools import product
 
+
 def solve_party_brute(lines):
     index = 1
     results = []
@@ -18,6 +19,7 @@ def solve_party_brute(lines):
 
     return results
 
+
 def build_tree_brute(matrix):
     tree = {i: [] for i in range(len(matrix))}
     for i in range(len(matrix)):
@@ -25,6 +27,7 @@ def build_tree_brute(matrix):
             if matrix[i][j] == 1:
                 tree[i].append(j)
     return tree
+
 
 def brute_force(tree, values):
     n = len(values)

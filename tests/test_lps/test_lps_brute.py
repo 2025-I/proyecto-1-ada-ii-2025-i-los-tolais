@@ -1,10 +1,11 @@
 "Prueba de la solución de fuerza bruta para el problema LPS"
+
 import random
 import string
 import unittest
 
-from src.ejercicios.lps.lps_brute import solve_lps_brute  
-from src.ejercicios.lps.lps_dynamic import solve_lps_dp  
+from src.ejercicios.lps.lps_brute import solve_lps_brute
+from src.ejercicios.lps.lps_dynamic import solve_lps_dp
 
 
 class TestBruteRepetition(unittest.TestCase):

@@ -1,7 +1,7 @@
 from ...utils.normalize import normalize
 
-def solve_lps_brute(lines: list[str]) -> list[str]:
 
+def solve_lps_brute(lines: list[str]) -> list[str]:
 
     def is_pal(x: str) -> bool:
         return x == x[::-1]
