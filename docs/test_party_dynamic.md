@@ -69,6 +69,7 @@ Observaciones destacadas:
 1000   →  0.28896 s   (~71× más que 100)
 10000  →  28.62594 s  (~99× más que 1000)
 ```
+La complejidad temporal de solve_party_dp es 𝑂(n), lo cual es consistente con los resultados experimentales para árboles de tamaño hasta 10,000 nodos. La linealidad se mantiene a pesar del crecimiento del tiempo debido al tamaño y a validaciones adicionales.
 
 ---
 
