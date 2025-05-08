@@ -32,13 +32,11 @@ Cada caso se ejecutó con **5 repeticiones por tamaño** y se promediaron los ti
 ## Resultados de ejecución
 
 | Tamaño | Nº de matrices | Dimensión de cada matriz | Repeticiones | Tiempo promedio |
-| Juguete|    10          |       20 × 20            | 5            |   0.00017       |
-| Juguete|    100         |       20 × 20            | 5            |   0.00018       |
-| Juguete|    1000        |       20 × 20            | 5            |   0.00018       |
-| Juguete|    10000       |       20 × 20            | 5            |   0.00018       |
-| Juguete|    50000       |       20 × 20            | 5            |   0.00017       |        
-
-> **Nota**: El tiempo es por ejecución de `solve_party_brute` sobre una única matriz de 15 × 15.
+| Juguete|    10          |       20 × 20            | 5            |   0.00200       |
+| Pequeño|    100         |       20 × 20            | 5            |   0.01776       |
+| Mediano|    1000        |       20 × 20            | 5            |   0.17529       |
+| Grande |    10000       |       20 × 20            | 5            |   1.84926       |
+| Extra  |    50000       |       20 × 20            | 5            |   9.02894       |        
 
 ---
 

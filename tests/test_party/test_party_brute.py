@@ -76,11 +76,7 @@ def test_party_fixed_size_scaled(num_problems, label):
             expected_total = sum(values[i] for i in range(size) if invited[i] == 1)
             assert total == expected_total
         # Calcular el tiempo promedio para esta repetición
-        promedio_tiempos += rep_avg_time / num_problems
-
-        # Imprimir tiempos individuales de cada iteración para ver las variaciones
-        for i, tiempo in enumerate(tiempos_individuales, 1):
-            print(f"Iteración {i} tiempo: {tiempo:.6f} segundos")
+        promedio_tiempos += rep_avg_time
 
     # Calcular el promedio general para este tamaño después de todas las repeticiones
     promedio_general = promedio_tiempos / repeticiones
