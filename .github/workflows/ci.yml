@@ -26,7 +26,7 @@ jobs:
 
       - name: Check Compilation
         run: |
-          python -m compileall src  # Solo verificar si el código compila
+          python -m compileall src  
 
       - name: Run Pylint
         run: |

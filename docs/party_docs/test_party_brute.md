@@ -23,7 +23,7 @@ A diferencia de los enfoques de programación dinámica y voraz, el algoritmo de
 - Pruebas experimentales muestran que incluso `n = 20` puede tardar varios segundos.
 - Con `n >= 25`, es posible que no termine en tiempos razonables.
 
-Por estas razones, **las pruebas para fuerza bruta se realizaron utilizando matrices de tamaño fijo `20 x 20`**, pero con cantidades variables de matrices generadas para simular la carga creciente (10, 100, 1000, 10000, 50000).
+Por estas razones, **las pruebas para fuerza bruta se realizaron utilizando matrices de tamaño fijo `15 x 15`**, pero con cantidades variables de matrices generadas para simular la carga creciente (10, 100, 1000, 10000, 50000).
 
 Cada caso se ejecutó con **5 repeticiones por tamaño** y se promediaron los tiempos.
 
@@ -31,17 +31,17 @@ Cada caso se ejecutó con **5 repeticiones por tamaño** y se promediaron los ti
 
 ## Resultados de ejecución
 
-| Tamaño | Nº de matrices | Dimensión de cada matriz | Repeticiones | Tiempo promedio |
-| Juguete|    10          |       20 × 20            | 5            |   0.00200       |
-| Pequeño|    100         |       20 × 20            | 5            |   0.01776       |
-| Mediano|    1000        |       20 × 20            | 5            |   0.17529       |
-| Grande |    10000       |       20 × 20            | 5            |   1.84926       |
-| Extra  |    50000       |       20 × 20            | 5            |   9.02894       |        
+| Tamaño | Nº de matrices | Dimensión de cada matriz | Repeticiones | Tiempo promedio  |
+| Juguete|    10          |       15 × 15            | 5            |   0.37340        |
+| Pequeño|    100         |       15 × 15            | 5            |   3.55231        |
+| Mediano|    1000        |       15 × 15            | 5            |   36.25317       |
+| Grande |    10000       |       10 × 10            | 5            |   11.95405       |
+| Extra  |    50000       |       10 × 10            | 5            |   60.90625       |        
 
 ---
 
 ## Conclusión
 
-El enfoque de fuerza bruta es útil únicamente como **referencia de exactitud** frente a algoritmos más eficientes. Su uso queda limitado a tamaños pequeños (hasta ~20 empleados). Para escalabilidad y uso real, se recomienda emplear programación dinámica o algoritmos voraces.
+El enfoque de fuerza bruta es útil únicamente como **referencia de exactitud** frente a algoritmos más eficientes. Su uso queda limitado a tamaños pequeños (hasta ~15 empleados). Para escalabilidad y uso real, se recomienda emplear programación dinámica o algoritmos voraces.
 
 - [Volver a la tabla de contenido](/docs/Readme.md)
