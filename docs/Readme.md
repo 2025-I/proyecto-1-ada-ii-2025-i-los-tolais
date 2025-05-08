@@ -16,3 +16,5 @@
     - [2.1 Documentacion del test para lps con solucion de fuerza bruta](/docs/lps_docs/test_lps_brute.md)
     - [2 Documentacion del test para lps con programación dinámica](/docs/lps_docs/test_lps_dp.md)
     - [2.3 Documentacion del test para lps con solucion voraz](/docs/lps_docs/test_lps_greedy.md)
+    - [2.4 Documentacion de la comparacion de las complejidades](/docs/lps_docs/discusion_complejidades_LPS.md)
+    
