@@ -103,14 +103,12 @@ for i in range(n):
 ```
 - **Número de subcadenas generadas**
     - Los bucles anidados for i in range(n) y for j in range(i,n) recorren todos los pares (i,j) con 0 ≤ i ≤ j < n.
-    - existen
-    $$
-    \sum_{i=0}^{n-1} (n - i)
+    - existen: 
+    $\sum_{i=0}^{n-1} (n - i)
     \;=\;
     \frac{n(n+1)}{2}
     \;=\;
-    O(n^2)
-    $$
+    O(n^2)$
     subcadenas posibles.
 - **Despues para cada subcadena se verifica si es palíndroma con:**
     ```
@@ -121,11 +119,11 @@ for i in range(n):
 - Para cada una de las O(n²) subcadenas generadas, se realiza una verificación que puede costar hasta O(n).
 
 - Por tanto, la complejidad total es:
-- **Tiempo**: $$O(n^3)$$
+- **Tiempo**: $O(n^3)$
 
 - **Complejidad espacial**
 - El algoritmo no usa estructuras auxiliares grandes.
 - Solo guarda un máximo de una subcadena (best) y la lista de salida out, por lo que el espacio adicional es:
-- **Espacial**: $$O(n)$$
+- **Espacial**: $O(n)$
 
 

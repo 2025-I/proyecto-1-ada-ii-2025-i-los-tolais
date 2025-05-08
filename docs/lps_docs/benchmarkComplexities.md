@@ -7,7 +7,7 @@ A continuación se presentan tres gráficas obtenidas al medir el tiempo de ejec
 ![Figura 1: lineal](/docs/images/Figure_1.png)
 - **Escala lineal (Fig. 1)**:
 
-    * El algoritmo de **Fuerza Bruta** (curva azul) muestra un crecimiento muy acelerado a medida que $n$ aumenta, mientras que **DP** (naranja) y **Greedy** (verde) crecen muchísimo más despacio.
+    * El algoritmo de **Fuerza Bruta** (curva azul) muestra un crecimiento muy acelerado a medida que el $n$ aumenta, mientras que **DP** (naranja) y **Greedy** (verde) crecen muchísimo más despacio.
 
    * Para $n=200$, la fuerza bruta supera los $1\cdot10^7$ ns, mientras que DP está alrededor de $4.8\cdot10^6$ ns y Greedy apenas $3\cdot10^5$ ns.
 

@@ -90,21 +90,21 @@ Este módulo implementa una solución basada en programación dinámica para enc
     - **Rellenar DP para longitudes ≥3**
         * `length` va de 3 a $n$ → $n-2$ valores.
         * Para cada `length`, `i` recorre de 0 a $n-\text{length}$ → en total
-    $$
+    $
          \sum_{\ell=3}^{n}(n-\ell+1)
          \;=\;
          \sum_{k=1}^{n-2}k
          \;=\;\frac{(n-2)(n-1)}{2}
          \;=\;O(n^2)
-    $$
+    $
     - **Extraer resultado**
         Operación de slicing $O(n)$, pero ejecutada una sola vez por cadena → $O(n)$.
         por tanto, el tiempo total es:
-        $$
+        $
         O(n^2)\;+\;O(n)\;+\;O(n^2)\;+\;O(n)
         \;=\;
         O(n^2)
-        $$
+        $
 
 
-- **Espacio**: O(n^2) debido a la tabla utilizada para almacenar los resultados intermedios (la matriz `P` de tamaño $n\times n$, es decir, **O(n²)**)
+- **Espacio**: $O(n^2)$ debido a la tabla utilizada para almacenar los resultados intermedios (la matriz `P` de tamaño $n\times n$, es decir, **O(n²)**)

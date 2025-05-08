@@ -83,3 +83,5 @@ Es **correcta** (verificada con pruebas automatizadas y comparación contra sali
 Es **eficiente** y escalable a grandes volúmenes de entrada.
 
 Cumple con las exigencias del proyecto en cuanto a rendimiento y exactitud.
+
+- [Volver a la tabla de contenido](/docs/Readme.md)

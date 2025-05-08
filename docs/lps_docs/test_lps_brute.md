@@ -60,3 +60,6 @@ Este algoritmo es adecuado únicamente para entradas pequeñas o para propósito
 - Correctitud confirmada frente a una solución de referencia.
 - Requiere **muchos recursos computacionales** para listas grandes.
 - Ideal para validación, no para producción o entrada de gran escala.
+
+
+- [Volver a la tabla de contenido](/docs/Readme.md)
