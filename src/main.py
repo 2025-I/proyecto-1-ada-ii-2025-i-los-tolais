@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
-#from ejercicios.lps.lps_dynamic import solve_lps_dp
 from src.ejercicios.lps.lps_dynamic import solve_lps_dp
 from src.ejercicios.party.party_dynamic import solve_party_dp
 from src.ejercicios.lps.lps_voraz import solve_lps_greedy
