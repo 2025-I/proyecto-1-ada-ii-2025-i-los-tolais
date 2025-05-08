@@ -3,7 +3,7 @@ import time
 
 import pytest
 
-from src.ejercicios.party.party_dynamic import solve_party_dp
+from src.ejercicios.party.party_brute import solve_party_brute
 
 
 def generate_random_tree_matrix(m):
@@ -31,7 +31,7 @@ def format_matrix_as_lines(matrix):
     ],
 )
 def test_party_fixed_size_scaled(num_problems, label):
-    size = 20  # Tamaño fijo de cada problema
+    size = 10 # Tamaño fijo de cada problema
     repeticiones = 5
 
     # Cálculo del tiempo promedio para cada tamaño
@@ -50,7 +50,7 @@ def test_party_fixed_size_scaled(num_problems, label):
             lines.append(" ".join(map(str, values)))
 
             start = time.perf_counter()
-            outputs = solve_party_dp(lines)
+            outputs = solve_party_brute(lines)
             end = time.perf_counter()
 
             time_taken = end - start
