@@ -103,14 +103,12 @@ for i in range(n):
 ```
 - **Número de subcadenas generadas**
     - Los bucles anidados for i in range(n) y for j in range(i,n) recorren todos los pares (i,j) con 0 ≤ i ≤ j < n.
-    - existen
-    $$
-    \sum_{i=0}^{n-1} (n - i)
+    - existen: 
+    $$\sum_{i=0}^{n-1} (n - i)
     \;=\;
     \frac{n(n+1)}{2}
     \;=\;
-    O(n^2)
-    $$
+    O(n^2)$$
     subcadenas posibles.
 - **Despues para cada subcadena se verifica si es palíndroma con:**
     ```
