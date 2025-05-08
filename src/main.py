@@ -8,9 +8,24 @@ from src.ejercicios.lps.lps_brute import solve_lps_brute
 from src.ejercicios.party.party_brute import solve_party_brute
 from src.ejercicios.party.party_voraz import solve_party_voraz
 
+def get_algorithm(name):
+    """
+    Devuelve la función correspondiente según el nombre del algoritmo seleccionado.
+    """
+    algorithms = {
+        "LPS (Programación Dinámica)": solve_lps_dp,
+        "LPS (Solución de Fuerza Bruta)": solve_lps_brute,
+        "LPS (Solución Voraz)": solve_lps_greedy,
+        "Party (Programación Dinámica)": solve_party_dp,
+        "Party (Solución de Fuerza Bruta)": solve_party_brute,
+        "Party (Solución Voraz)": solve_party_voraz
+    }
+    return algorithms.get(name, None)
+
+
 def run_algorithm():
     filepath = file_path_var.get()
-    algorithm = algo_var.get()
+    algorithm_name = algo_var.get()
 
     if not filepath:
         messagebox.showwarning("Archivo no seleccionado", "Por favor selecciona un archivo de entrada.")
@@ -23,29 +38,20 @@ def run_algorithm():
         messagebox.showerror("Error de lectura", f"No se pudo leer el archivo:\n{e}")
         return
 
+    algorithm = get_algorithm(algorithm_name)
+    if not algorithm:
+        messagebox.showwarning("Algoritmo no seleccionado", "Selecciona un algoritmo válido.")
+        return
+
     try:
-        if algorithm == "LPS (Programación Dinámica)":
-            result = solve_lps_dp(lines)
-        elif algorithm == "LPS (Solución de Fuerza Bruta)":
-            result = solve_lps_brute(lines)
-        elif algorithm == "LPS (Solución Voraz)":
-            result = solve_lps_greedy(lines)
-        elif algorithm == "Party (Programación Dinámica)":
-            result = solve_party_dp(lines)
-        elif algorithm == "Party (Solución de Fuerza Bruta)":
-            result = solve_party_brute(lines)
-        elif algorithm == "Party (Solución Voraz)":
-            result = solve_party_voraz(lines)
-        else:
-            messagebox.showwarning("Algoritmo no seleccionado", "Selecciona un algoritmo.")
-            return
+        result = algorithm(lines)
     except Exception as e:
         messagebox.showerror("Error al procesar", f"Hubo un error ejecutando el algoritmo:\n{e}")
         return
 
     output_text.delete("1.0", tk.END)
-    print("Resultado:\n", "\n".join(result))
     output_text.insert(tk.END, "\n".join(result))
+
 
 
 def select_file():
