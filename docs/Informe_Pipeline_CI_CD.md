@@ -104,3 +104,5 @@ Este pipeline garantiza que cualquier modificación al código:
 - Sea analizada por herramientas externas (como Codacy) para obtener métricas de calidad y cobertura.
 
 La automatización de estas tareas es fundamental para mantener la calidad y la estabilidad del proyecto a medida que evoluciona.
+
+- [Volver a la tabla de contenido](/docs/Readme.md)

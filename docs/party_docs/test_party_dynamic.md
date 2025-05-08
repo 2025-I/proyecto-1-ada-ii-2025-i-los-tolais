@@ -80,3 +80,5 @@ La solución `solve_party_dp`:
 - Es **correcta** y verificada automáticamente con múltiples validaciones.
 - Escala de forma **aceptable**, aunque con mayor tiempo que la solución voraz.
 - Ofrece **máxima precisión**, garantizando la selección óptima sin conflictos.
+
+- [Volver a la tabla de contenido](/docs/Readme.md)

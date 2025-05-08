@@ -43,3 +43,5 @@ Cada caso se ejecutó con **5 repeticiones por tamaño** y se promediaron los ti
 ## Conclusión
 
 El enfoque de fuerza bruta es útil únicamente como **referencia de exactitud** frente a algoritmos más eficientes. Su uso queda limitado a tamaños pequeños (hasta ~20 empleados). Para escalabilidad y uso real, se recomienda emplear programación dinámica o algoritmos voraces.
+
+- [Volver a la tabla de contenido](/docs/Readme.md)

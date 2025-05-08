@@ -96,4 +96,4 @@ La solución `solve_party_voraz`:
 - Tiene **una escalabilidad limitada**, con tiempos de ejecución que crecen rápidamente.
 - Es **apropiada para tamaños pequeños o medianos**, pero no recomendable para instancias grandes.
 
-
+- [Volver a la tabla de contenido](/docs/Readme.md)

@@ -41,3 +41,5 @@ El problema de la Subsecuencia Palindrómica Más Larga (LPS, por sus siglas en 
 
 ## Conclusión
 La gráfica subraya la superioridad de la Programación Dinámica para LPS, equilibrando eficiencia y precisión. Mientras que los enfoques Greedy son rápidos, su aplicabilidad depende de si se toleran soluciones subóptimas. La Fuerza Bruta, aunque mejor de lo esperado en pruebas pequeñas, sigue siendo inviable para entradas grandes. Se recomienda validar los algoritmos Greedy en contextos donde la optimalidad no sea crítica.  
+
+- [Volver a la tabla de contenido](/docs/Readme.md)
